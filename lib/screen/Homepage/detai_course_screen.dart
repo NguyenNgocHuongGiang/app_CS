@@ -558,7 +558,7 @@ class _DetailCourseState extends State<DetailCourse> {
                                             : Colors.grey[100],
                                         radius: 10.0,
                                       ),
-                                      enabled: !baiHoc[
+                                      enabled: baiHoc[
                                           'isDemo'], // Chỉ cho phép nhấn nếu isDemo là true
                                       onTap: baiHoc['isDemo']
                                           ? () {
