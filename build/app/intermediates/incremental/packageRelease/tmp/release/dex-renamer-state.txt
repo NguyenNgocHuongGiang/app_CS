@@ -1,0 +1,4 @@
+#Wed Mar 19 16:54:41 ICT 2025
+base.0=/Users/thanhtrinh/Documents/linh tinh /app_CS/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
