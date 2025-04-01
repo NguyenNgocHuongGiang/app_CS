@@ -20,8 +20,8 @@ dev.fluttercommunity.plus.packageinfo.package_info_plus-jetified-annotation-expe
 dev.fluttercommunity.plus.packageinfo.package_info_plus-core-runtime-2.2.0-19 /Users/thanhtrinh/.gradle/caches/8.10.2/transforms/ff849810dfe34a0ab790c402787c149e/transformed/core-runtime-2.2.0/res
 dev.fluttercommunity.plus.packageinfo.package_info_plus-main-20 /Users/thanhtrinh/.pub-cache/hosted/pub.dev/package_info_plus-8.2.1/android/src/main/res
 dev.fluttercommunity.plus.packageinfo.package_info_plus-release-21 /Users/thanhtrinh/.pub-cache/hosted/pub.dev/package_info_plus-8.2.1/android/src/release/res
-dev.fluttercommunity.plus.packageinfo.package_info_plus-pngs-22 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/package_info_plus/generated/res/pngs/release
-dev.fluttercommunity.plus.packageinfo.package_info_plus-resValues-23 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/package_info_plus/generated/res/resValues/release
-dev.fluttercommunity.plus.packageinfo.package_info_plus-mergeReleaseResources-24 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/package_info_plus/intermediates/incremental/release/mergeReleaseResources/merged.dir
-dev.fluttercommunity.plus.packageinfo.package_info_plus-mergeReleaseResources-25 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/package_info_plus/intermediates/incremental/release/mergeReleaseResources/stripped.dir
-dev.fluttercommunity.plus.packageinfo.package_info_plus-release-26 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/package_info_plus/intermediates/merged_res/release/mergeReleaseResources
+dev.fluttercommunity.plus.packageinfo.package_info_plus-pngs-22 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/package_info_plus/generated/res/pngs/release
+dev.fluttercommunity.plus.packageinfo.package_info_plus-resValues-23 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/package_info_plus/generated/res/resValues/release
+dev.fluttercommunity.plus.packageinfo.package_info_plus-mergeReleaseResources-24 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/package_info_plus/intermediates/incremental/release/mergeReleaseResources/merged.dir
+dev.fluttercommunity.plus.packageinfo.package_info_plus-mergeReleaseResources-25 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/package_info_plus/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+dev.fluttercommunity.plus.packageinfo.package_info_plus-release-26 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/package_info_plus/intermediates/merged_res/release/mergeReleaseResources

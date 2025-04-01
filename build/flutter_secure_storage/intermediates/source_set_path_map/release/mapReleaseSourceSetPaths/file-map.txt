@@ -21,8 +21,8 @@ com.it_nomads.fluttersecurestorage.flutter_secure_storage-jetified-annotation-ex
 com.it_nomads.fluttersecurestorage.flutter_secure_storage-core-runtime-2.2.0-20 /Users/thanhtrinh/.gradle/caches/8.10.2/transforms/ff849810dfe34a0ab790c402787c149e/transformed/core-runtime-2.2.0/res
 com.it_nomads.fluttersecurestorage.flutter_secure_storage-main-21 /Users/thanhtrinh/.pub-cache/hosted/pub.dev/flutter_secure_storage-9.2.4/android/src/main/res
 com.it_nomads.fluttersecurestorage.flutter_secure_storage-release-22 /Users/thanhtrinh/.pub-cache/hosted/pub.dev/flutter_secure_storage-9.2.4/android/src/release/res
-com.it_nomads.fluttersecurestorage.flutter_secure_storage-pngs-23 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/flutter_secure_storage/generated/res/pngs/release
-com.it_nomads.fluttersecurestorage.flutter_secure_storage-resValues-24 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/flutter_secure_storage/generated/res/resValues/release
-com.it_nomads.fluttersecurestorage.flutter_secure_storage-mergeReleaseResources-25 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/flutter_secure_storage/intermediates/incremental/release/mergeReleaseResources/merged.dir
-com.it_nomads.fluttersecurestorage.flutter_secure_storage-mergeReleaseResources-26 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/flutter_secure_storage/intermediates/incremental/release/mergeReleaseResources/stripped.dir
-com.it_nomads.fluttersecurestorage.flutter_secure_storage-release-27 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/flutter_secure_storage/intermediates/merged_res/release/mergeReleaseResources
+com.it_nomads.fluttersecurestorage.flutter_secure_storage-pngs-23 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/flutter_secure_storage/generated/res/pngs/release
+com.it_nomads.fluttersecurestorage.flutter_secure_storage-resValues-24 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/flutter_secure_storage/generated/res/resValues/release
+com.it_nomads.fluttersecurestorage.flutter_secure_storage-mergeReleaseResources-25 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/flutter_secure_storage/intermediates/incremental/release/mergeReleaseResources/merged.dir
+com.it_nomads.fluttersecurestorage.flutter_secure_storage-mergeReleaseResources-26 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/flutter_secure_storage/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+com.it_nomads.fluttersecurestorage.flutter_secure_storage-release-27 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/flutter_secure_storage/intermediates/merged_res/release/mergeReleaseResources

@@ -20,9 +20,9 @@ dev.fluttercommunity.plus.wakelock.wakelock_plus-jetified-annotation-experimenta
 dev.fluttercommunity.plus.wakelock.wakelock_plus-core-runtime-2.2.0-19 /Users/thanhtrinh/.gradle/caches/8.10.2/transforms/ff849810dfe34a0ab790c402787c149e/transformed/core-runtime-2.2.0/res
 dev.fluttercommunity.plus.wakelock.wakelock_plus-main-20 /Users/thanhtrinh/.pub-cache/hosted/pub.dev/wakelock_plus-1.2.10/android/src/main/res
 dev.fluttercommunity.plus.wakelock.wakelock_plus-release-21 /Users/thanhtrinh/.pub-cache/hosted/pub.dev/wakelock_plus-1.2.10/android/src/release/res
-dev.fluttercommunity.plus.wakelock.wakelock_plus-release-22 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/package_info_plus/intermediates/packaged_res/release/packageReleaseResources
-dev.fluttercommunity.plus.wakelock.wakelock_plus-pngs-23 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/wakelock_plus/generated/res/pngs/release
-dev.fluttercommunity.plus.wakelock.wakelock_plus-resValues-24 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/wakelock_plus/generated/res/resValues/release
-dev.fluttercommunity.plus.wakelock.wakelock_plus-mergeReleaseResources-25 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/wakelock_plus/intermediates/incremental/release/mergeReleaseResources/merged.dir
-dev.fluttercommunity.plus.wakelock.wakelock_plus-mergeReleaseResources-26 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/wakelock_plus/intermediates/incremental/release/mergeReleaseResources/stripped.dir
-dev.fluttercommunity.plus.wakelock.wakelock_plus-release-27 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/wakelock_plus/intermediates/merged_res/release/mergeReleaseResources
+dev.fluttercommunity.plus.wakelock.wakelock_plus-release-22 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/package_info_plus/intermediates/packaged_res/release/packageReleaseResources
+dev.fluttercommunity.plus.wakelock.wakelock_plus-pngs-23 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/wakelock_plus/generated/res/pngs/release
+dev.fluttercommunity.plus.wakelock.wakelock_plus-resValues-24 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/wakelock_plus/generated/res/resValues/release
+dev.fluttercommunity.plus.wakelock.wakelock_plus-mergeReleaseResources-25 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/wakelock_plus/intermediates/incremental/release/mergeReleaseResources/merged.dir
+dev.fluttercommunity.plus.wakelock.wakelock_plus-mergeReleaseResources-26 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/wakelock_plus/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+dev.fluttercommunity.plus.wakelock.wakelock_plus-release-27 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/wakelock_plus/intermediates/merged_res/release/mergeReleaseResources

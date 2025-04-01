@@ -5,7 +5,7 @@
     type="LIBRARY"
     maven="io.flutter.plugins.pathprovider:path_provider_android:1.0-SNAPSHOT"
     agpVersion="8.7.0"
-    buildFolder="/Users/thanhtrinh/Documents/linh tinh /app_CS/build/path_provider_android"
+    buildFolder="/Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/path_provider_android"
     bootClassPath="/Users/thanhtrinh/Library/Android/sdk/platforms/android-34/android.jar:/Users/thanhtrinh/Library/Android/sdk/build-tools/34.0.0/core-lambda-stubs.jar"
     javaSourceLevel="11"
     compileTarget="android-34"

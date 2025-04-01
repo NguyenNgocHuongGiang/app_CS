@@ -44,22 +44,22 @@ com.example.app_cybersoft.app-jetified-facebook-common-17.0.1-42 /Users/thanhtri
 com.example.app_cybersoft.app-jetified-datastore-core-release-43 /Users/thanhtrinh/.gradle/caches/8.10.2/transforms/f66b4ebeb8e04a26c0939bfc3a155c4b/transformed/jetified-datastore-core-release/res
 com.example.app_cybersoft.app-jetified-datastore-release-44 /Users/thanhtrinh/.gradle/caches/8.10.2/transforms/f90f9a7324ae5a46421e1e6e4732c91a/transformed/jetified-datastore-release/res
 com.example.app_cybersoft.app-core-runtime-2.2.0-45 /Users/thanhtrinh/.gradle/caches/8.10.2/transforms/ff849810dfe34a0ab790c402787c149e/transformed/core-runtime-2.2.0/res
-com.example.app_cybersoft.app-main-46 /Users/thanhtrinh/Documents/linh tinh /app_CS/android/app/src/main/res
-com.example.app_cybersoft.app-release-47 /Users/thanhtrinh/Documents/linh tinh /app_CS/android/app/src/release/res
-com.example.app_cybersoft.app-pngs-48 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/app/generated/res/pngs/release
-com.example.app_cybersoft.app-resValues-49 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/app/generated/res/resValues/release
-com.example.app_cybersoft.app-packageReleaseResources-50 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/app/intermediates/incremental/release/packageReleaseResources/merged.dir
-com.example.app_cybersoft.app-packageReleaseResources-51 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/app/intermediates/incremental/release/packageReleaseResources/stripped.dir
-com.example.app_cybersoft.app-merged-not-compiled-resources-52 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/app/intermediates/merged-not-compiled-resources/release
-com.example.app_cybersoft.app-release-53 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/app/intermediates/merged_res/release/mergeReleaseResources
-com.example.app_cybersoft.app-release-54 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/connectivity_plus/intermediates/packaged_res/release/packageReleaseResources
-com.example.app_cybersoft.app-release-55 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/flutter_facebook_auth/intermediates/packaged_res/release/packageReleaseResources
-com.example.app_cybersoft.app-release-56 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/flutter_inappwebview_android/intermediates/packaged_res/release/packageReleaseResources
-com.example.app_cybersoft.app-release-57 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/flutter_localization/intermediates/packaged_res/release/packageReleaseResources
-com.example.app_cybersoft.app-release-58 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/flutter_secure_storage/intermediates/packaged_res/release/packageReleaseResources
-com.example.app_cybersoft.app-release-59 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/package_info_plus/intermediates/packaged_res/release/packageReleaseResources
-com.example.app_cybersoft.app-release-60 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/path_provider_android/intermediates/packaged_res/release/packageReleaseResources
-com.example.app_cybersoft.app-release-61 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/shared_preferences_android/intermediates/packaged_res/release/packageReleaseResources
-com.example.app_cybersoft.app-release-62 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/video_player_android/intermediates/packaged_res/release/packageReleaseResources
-com.example.app_cybersoft.app-release-63 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/wakelock_plus/intermediates/packaged_res/release/packageReleaseResources
-com.example.app_cybersoft.app-release-64 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/webview_flutter_android/intermediates/packaged_res/release/packageReleaseResources
+com.example.app_cybersoft.app-main-46 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/android/app/src/main/res
+com.example.app_cybersoft.app-release-47 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/android/app/src/release/res
+com.example.app_cybersoft.app-pngs-48 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/app/generated/res/pngs/release
+com.example.app_cybersoft.app-resValues-49 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/app/generated/res/resValues/release
+com.example.app_cybersoft.app-packageReleaseResources-50 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/app/intermediates/incremental/release/packageReleaseResources/merged.dir
+com.example.app_cybersoft.app-packageReleaseResources-51 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/app/intermediates/incremental/release/packageReleaseResources/stripped.dir
+com.example.app_cybersoft.app-merged-not-compiled-resources-52 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/app/intermediates/merged-not-compiled-resources/release
+com.example.app_cybersoft.app-release-53 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/app/intermediates/merged_res/release/mergeReleaseResources
+com.example.app_cybersoft.app-release-54 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/connectivity_plus/intermediates/packaged_res/release/packageReleaseResources
+com.example.app_cybersoft.app-release-55 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/flutter_facebook_auth/intermediates/packaged_res/release/packageReleaseResources
+com.example.app_cybersoft.app-release-56 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/flutter_inappwebview_android/intermediates/packaged_res/release/packageReleaseResources
+com.example.app_cybersoft.app-release-57 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/flutter_localization/intermediates/packaged_res/release/packageReleaseResources
+com.example.app_cybersoft.app-release-58 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/flutter_secure_storage/intermediates/packaged_res/release/packageReleaseResources
+com.example.app_cybersoft.app-release-59 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/package_info_plus/intermediates/packaged_res/release/packageReleaseResources
+com.example.app_cybersoft.app-release-60 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/path_provider_android/intermediates/packaged_res/release/packageReleaseResources
+com.example.app_cybersoft.app-release-61 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/shared_preferences_android/intermediates/packaged_res/release/packageReleaseResources
+com.example.app_cybersoft.app-release-62 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/video_player_android/intermediates/packaged_res/release/packageReleaseResources
+com.example.app_cybersoft.app-release-63 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/wakelock_plus/intermediates/packaged_res/release/packageReleaseResources
+com.example.app_cybersoft.app-release-64 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/webview_flutter_android/intermediates/packaged_res/release/packageReleaseResources

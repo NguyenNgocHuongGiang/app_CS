@@ -20,8 +20,8 @@ com.mastertipsy.flutter_localization-jetified-annotation-experimental-1.4.0-18 /
 com.mastertipsy.flutter_localization-core-runtime-2.2.0-19 /Users/thanhtrinh/.gradle/caches/8.10.2/transforms/ff849810dfe34a0ab790c402787c149e/transformed/core-runtime-2.2.0/res
 com.mastertipsy.flutter_localization-main-20 /Users/thanhtrinh/.pub-cache/hosted/pub.dev/flutter_localization-0.3.1/android/src/main/res
 com.mastertipsy.flutter_localization-release-21 /Users/thanhtrinh/.pub-cache/hosted/pub.dev/flutter_localization-0.3.1/android/src/release/res
-com.mastertipsy.flutter_localization-pngs-22 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/flutter_localization/generated/res/pngs/release
-com.mastertipsy.flutter_localization-resValues-23 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/flutter_localization/generated/res/resValues/release
-com.mastertipsy.flutter_localization-mergeReleaseResources-24 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/flutter_localization/intermediates/incremental/release/mergeReleaseResources/merged.dir
-com.mastertipsy.flutter_localization-mergeReleaseResources-25 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/flutter_localization/intermediates/incremental/release/mergeReleaseResources/stripped.dir
-com.mastertipsy.flutter_localization-release-26 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/flutter_localization/intermediates/merged_res/release/mergeReleaseResources
+com.mastertipsy.flutter_localization-pngs-22 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/flutter_localization/generated/res/pngs/release
+com.mastertipsy.flutter_localization-resValues-23 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/flutter_localization/generated/res/resValues/release
+com.mastertipsy.flutter_localization-mergeReleaseResources-24 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/flutter_localization/intermediates/incremental/release/mergeReleaseResources/merged.dir
+com.mastertipsy.flutter_localization-mergeReleaseResources-25 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/flutter_localization/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+com.mastertipsy.flutter_localization-release-26 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/flutter_localization/intermediates/merged_res/release/mergeReleaseResources

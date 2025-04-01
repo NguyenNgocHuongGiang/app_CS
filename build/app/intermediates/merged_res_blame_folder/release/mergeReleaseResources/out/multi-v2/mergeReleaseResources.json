@@ -2126,7 +2126,24 @@
             "outputFile": "com.example.app_cybersoft.app-release-53:/values-night-v8_values-night-v8.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/thanhtrinh/Documents/linh tinh /app_CS/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/Users/thanhtrinh/.gradle/caches/8.10.2/transforms/67e431d42222568371fff0afd22bbdc6/transformed/appcompat-1.6.1/res/values-night-v8/values-night-v8.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,125,209,293,389,491,593,687",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "120,204,288,384,486,588,682,771"
+                    },
+                    "to": {
+                        "startLines": "9,10,11,12,13,14,15,16",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "405,475,559,643,739,841,943,1037",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "470,554,638,734,836,938,1032,1121"
+                    }
+                },
+                {
+                    "source": "/Users/thanhtrinh/Documents/linh tinh 4/app_CS/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
@@ -2142,23 +2159,6 @@
                         "endLines": "5,8",
                         "endColumns": "12,12",
                         "endOffsets": "231,400"
-                    }
-                },
-                {
-                    "source": "/Users/thanhtrinh/.gradle/caches/8.10.2/transforms/67e431d42222568371fff0afd22bbdc6/transformed/appcompat-1.6.1/res/values-night-v8/values-night-v8.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,125,209,293,389,491,593,687",
-                        "endColumns": "69,83,83,95,101,101,93,88",
-                        "endOffsets": "120,204,288,384,486,588,682,771"
-                    },
-                    "to": {
-                        "startLines": "9,10,11,12,13,14,15,16",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "405,475,559,643,739,841,943,1037",
-                        "endColumns": "69,83,83,95,101,101,93,88",
-                        "endOffsets": "470,554,638,734,836,938,1032,1121"
                     }
                 }
             ]
@@ -2256,6 +2256,25 @@
                     }
                 },
                 {
+                    "source": "/Users/thanhtrinh/Documents/linh tinh 4/app_CS/android/app/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "3,14",
+                        "startColumns": "4,4",
+                        "startOffsets": "173,818",
+                        "endLines": "7,16",
+                        "endColumns": "12,12",
+                        "endOffsets": "476,982"
+                    },
+                    "to": {
+                        "startLines": "1617,1621",
+                        "startColumns": "4,4",
+                        "startOffsets": "102642,102823",
+                        "endLines": "1620,1623",
+                        "endColumns": "12,12",
+                        "endOffsets": "102818,102987"
+                    }
+                },
+                {
                     "source": "/Users/thanhtrinh/.gradle/caches/8.10.2/transforms/b3d51a44ab6b56289d4858158a1ad6dd/transformed/jetified-savedstate-1.2.1/res/values/values.xml",
                     "from": {
                         "startLines": "2",
@@ -2326,7 +2345,7 @@
                     }
                 },
                 {
-                    "source": "/Users/thanhtrinh/Documents/linh tinh /app_CS/build/flutter_inappwebview_android/intermediates/packaged_res/release/packageReleaseResources/values/values.xml",
+                    "source": "/Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/flutter_inappwebview_android/intermediates/packaged_res/release/packageReleaseResources/values/values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,11,14",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
@@ -2545,25 +2564,6 @@
                         "endLines": "63,132,292,293,294,295,296,297,298,359,360,361,400,401,466,477,482,485,488,489,490,1605,1786,1792,1798,1801,1807,1811,1814,1821,1827,1830,1836,1841,1846,1853,1855,1861,1867,1875,1880,1887,1892,1898,1902,1909,1913,1919,1925,1928,1932,1933,1934,2919,2968,3144,3166,3314,3487,3561,3571,3581,3588,3594,3637,3711,3869,3886",
                         "endColumns": "72,68,63,54,67,66,64,56,56,47,47,60,62,62,37,56,43,13,138,49,47,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,46,55,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24",
                         "endOffsets": "2306,7072,18105,18160,18228,18295,18360,18417,18474,21932,21980,22041,24126,24189,29300,30071,30377,30517,30780,30830,30878,102243,115009,115254,115592,115738,116078,116290,116453,116860,117198,117321,117660,117899,118156,118527,118587,118925,119211,119660,119952,120340,120645,120989,121234,121564,121771,122039,122312,122456,122657,122704,122760,168971,170634,179118,179839,184964,190475,192780,193062,193367,193629,193889,195312,197857,203984,204552"
-                    }
-                },
-                {
-                    "source": "/Users/thanhtrinh/Documents/linh tinh /app_CS/android/app/src/main/res/values/styles.xml",
-                    "from": {
-                        "startLines": "3,14",
-                        "startColumns": "4,4",
-                        "startOffsets": "173,818",
-                        "endLines": "7,16",
-                        "endColumns": "12,12",
-                        "endOffsets": "476,982"
-                    },
-                    "to": {
-                        "startLines": "1617,1621",
-                        "startColumns": "4,4",
-                        "startOffsets": "102642,102823",
-                        "endLines": "1620,1623",
-                        "endColumns": "12,12",
-                        "endOffsets": "102818,102987"
                     }
                 },
                 {

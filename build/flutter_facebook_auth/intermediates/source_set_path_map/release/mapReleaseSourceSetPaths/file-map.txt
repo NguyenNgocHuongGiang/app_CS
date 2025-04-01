@@ -28,8 +28,8 @@ app.meedu.flutter_facebook_auth-jetified-facebook-common-17.0.1-26 /Users/thanht
 app.meedu.flutter_facebook_auth-core-runtime-2.2.0-27 /Users/thanhtrinh/.gradle/caches/8.10.2/transforms/ff849810dfe34a0ab790c402787c149e/transformed/core-runtime-2.2.0/res
 app.meedu.flutter_facebook_auth-main-28 /Users/thanhtrinh/.pub-cache/hosted/pub.dev/flutter_facebook_auth-7.1.1/android/src/main/res
 app.meedu.flutter_facebook_auth-release-29 /Users/thanhtrinh/.pub-cache/hosted/pub.dev/flutter_facebook_auth-7.1.1/android/src/release/res
-app.meedu.flutter_facebook_auth-pngs-30 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/flutter_facebook_auth/generated/res/pngs/release
-app.meedu.flutter_facebook_auth-resValues-31 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/flutter_facebook_auth/generated/res/resValues/release
-app.meedu.flutter_facebook_auth-mergeReleaseResources-32 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/flutter_facebook_auth/intermediates/incremental/release/mergeReleaseResources/merged.dir
-app.meedu.flutter_facebook_auth-mergeReleaseResources-33 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/flutter_facebook_auth/intermediates/incremental/release/mergeReleaseResources/stripped.dir
-app.meedu.flutter_facebook_auth-release-34 /Users/thanhtrinh/Documents/linh tinh /app_CS/build/flutter_facebook_auth/intermediates/merged_res/release/mergeReleaseResources
+app.meedu.flutter_facebook_auth-pngs-30 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/flutter_facebook_auth/generated/res/pngs/release
+app.meedu.flutter_facebook_auth-resValues-31 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/flutter_facebook_auth/generated/res/resValues/release
+app.meedu.flutter_facebook_auth-mergeReleaseResources-32 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/flutter_facebook_auth/intermediates/incremental/release/mergeReleaseResources/merged.dir
+app.meedu.flutter_facebook_auth-mergeReleaseResources-33 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/flutter_facebook_auth/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+app.meedu.flutter_facebook_auth-release-34 /Users/thanhtrinh/Documents/linh tinh 4/app_CS/build/flutter_facebook_auth/intermediates/merged_res/release/mergeReleaseResources
