@@ -8,7 +8,7 @@ import 'package:app_cybersoft/provider/theme/theme_provider.dart';
 import 'package:app_cybersoft/routes/app_routes.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-void main() {
+void main() async {
   runApp(
     MultiProvider(
       providers: [

@@ -24,8 +24,8 @@ class BaiHocServices {
 
   Future<List<dynamic>> getKhoaHocGoiY(String bidanh) async {
     print(bidanh);
-    final response = await http.get(
-        Uri.parse('${Constants.BASE_URL}khoahoc/skill?alias=$bidanh'));
+    final response = await http
+        .get(Uri.parse('${Constants.BASE_URL}khoahoc/skill?alias=$bidanh'));
     print(response.body);
 
     final decodedData = json.decode(response.body);
@@ -41,7 +41,7 @@ class BaiHocServices {
     }
   }
 
-    Future<List<dynamic>> getReviewKhoaHoc(String bidanh) async {
+  Future<List<dynamic>> getReviewKhoaHoc(String bidanh) async {
     print(bidanh);
     final response = await http.get(
         Uri.parse('${Constants.BASE_URL}reviewcourse/course?alias=$bidanh'));

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "456976929475",
+    "project_id": "eduzy-app",
+    "storage_bucket": "eduzy-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:456976929475:android:8744f5d1bffaf93b8a0876",
+        "android_client_info": {
+          "package_name": "com.example.app_cybersoft"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "456976929475-8j0btnqao473nfm2697di8n7pe3ske4c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.app_cybersoft",
+            "certificate_hash": "88012b16ba50a0d1a45888ed7fab0fbd3cf4de93"
+          }
+        },
+        {
+          "client_id": "456976929475-29ikf88a7288dq262lg6l40qjtljjtuj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAY2zj9KHz8cAJ09Ie9talgQ5B0ZBoarUM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "456976929475-29ikf88a7288dq262lg6l40qjtljjtuj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

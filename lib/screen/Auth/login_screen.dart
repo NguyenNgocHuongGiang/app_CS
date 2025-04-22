@@ -1,7 +1,13 @@
+import 'package:app_cybersoft/provider/nguoidung/nguoidung_provider.dart';
+import 'package:app_cybersoft/screen/Auth/register_screen.dart';
 import 'package:app_cybersoft/services/auth/auth_services.dart';
+import 'package:app_cybersoft/templates/auth_template.dart';
 import 'package:app_cybersoft/templates/main_template.dart';
 import 'package:app_cybersoft/util/helper.dart';
 import 'package:flutter/material.dart';
+import 'package:app_cybersoft/services/auth/biometric_auth.dart';
+import 'package:provider/provider.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 // import 'auth_service.dart'; // Import AuthService
 
 class LoginScreen extends StatefulWidget {
@@ -45,7 +51,11 @@ class _LoginScreenState extends State<LoginScreen> {
         _errorMessage = null;
       });
 
-      saveUserData(result['accessToken']!, result['id']!);
+      print(result);
+
+      await saveUserData(result['accessToken']!, result['id']!);
+      await saveUserCredentials(
+          _emailController.text.trim(), _passwordController.text.trim());
 
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
@@ -57,6 +67,79 @@ class _LoginScreenState extends State<LoginScreen> {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => MainTemplate()),
+      );
+    }
+  }
+
+  void _loginWithFingerprint() async {
+    BiometricAuth bioAuth = BiometricAuth();
+    bool authenticated = await bioAuth.authenticate();
+
+    if (authenticated) {
+      var userCredentials = await bioAuth.getUserCredentials();
+      if (userCredentials != null) {
+        String email = userCredentials['email']!;
+        String password = userCredentials['password']!;
+
+        // Gọi API đăng nhập
+        final result = await AuthServices().login(email, password);
+
+        if (result != null) {
+          await saveUserData(result['accessToken']!, result['id']!);
+          Navigator.pushReplacementNamed(context, '/');
+        } else {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text("Đăng nhập thất bại!")),
+          );
+        }
+      }
+    }
+  }
+
+  void _loginWithGoogle() async {
+    try {
+      final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+      if (googleUser == null) return; // Người dùng huỷ đăng nhập
+
+      final GoogleSignInAuthentication googleAuth =
+          await googleUser.authentication;
+
+      final String? idToken = googleAuth.accessToken;
+      final String? email = googleUser.email;
+      final String? name = googleUser.displayName;
+      final String? avatar = googleUser.photoUrl;
+
+      if (idToken == null || email == null || name == null) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text("Không lấy được thông tin từ Google")),
+        );
+        return;
+      }
+      print(email);
+      print(name);
+      print(idToken);
+
+      // Gọi API đăng ký nếu cần
+      final userLogin = await AuthServices().loginGoogle(idToken);
+      print(userLogin);
+
+      if (userLogin != null &&
+          userLogin['accessToken'] != null &&
+          userLogin['id'] != null) {
+        await saveUserData(userLogin['accessToken']!, userLogin['id']!);
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text("Thông tin đăng nhập không hợp lệ")),
+        );
+      }
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => MainTemplate()),
+      );
+    } catch (e) {
+      print("Google Sign-In error: $e");
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text("Có lỗi xảy ra khi đăng nhập bằng Google")),
       );
     }
   }
@@ -97,14 +180,17 @@ class _LoginScreenState extends State<LoginScreen> {
                   width: width > 600 ? 400.0 : width * 0.8,
                   child: TextField(
                     controller: _passwordController,
-                    obscureText: !_isPasswordVisible, // Điều chỉnh hiển thị mật khẩu
+                    obscureText:
+                        !_isPasswordVisible, // Điều chỉnh hiển thị mật khẩu
                     decoration: InputDecoration(
                       labelText: 'Password',
                       border: OutlineInputBorder(),
                       prefixIcon: Icon(Icons.lock),
                       suffixIcon: IconButton(
                         icon: Icon(
-                          _isPasswordVisible ? Icons.visibility : Icons.visibility_off,
+                          _isPasswordVisible
+                              ? Icons.visibility
+                              : Icons.visibility_off,
                         ),
                         onPressed: () {
                           setState(() {
@@ -144,12 +230,19 @@ class _LoginScreenState extends State<LoginScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('Don\'t have an account? ', style: TextStyle(fontSize: 14)),
+                    Text('Don\'t have an account? ',
+                        style: TextStyle(fontSize: 14)),
                     TextButton(
                       onPressed: () {
-                        // Chuyển hướng đến trang đăng ký
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => AuthTemplate(
+                                  title: 'Register', child: RegisterScreen())),
+                        );
                       },
-                      child: Text('Register', style: TextStyle(color: Colors.amber[500])),
+                      child: Text('Register',
+                          style: TextStyle(color: Colors.amber[500])),
                     ),
                   ],
                 ),
@@ -159,13 +252,15 @@ class _LoginScreenState extends State<LoginScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     ElevatedButton.icon(
-                      onPressed: () {},
+                      onPressed: _loginWithGoogle,
                       icon: Icon(Icons.mail),
-                      label: Text('Google', style: TextStyle(color: Colors.white)),
+                      label:
+                          Text('Google', style: TextStyle(color: Colors.white)),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.red,
                         iconColor: Colors.white,
-                        minimumSize: Size(width > 600 ? 200.0 : width * 0.38, 45),
+                        minimumSize:
+                            Size(width > 600 ? 200.0 : width * 0.38, 45),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8.0),
                         ),
@@ -173,19 +268,37 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                     SizedBox(width: 10.0),
+                    // ElevatedButton.icon(
+                    //   onPressed: () {},
+                    //   icon: Icon(Icons.facebook),
+                    //   label: Text('Facebook',
+                    //       style: TextStyle(color: Colors.white)),
+                    //   style: ElevatedButton.styleFrom(
+                    //     backgroundColor: Colors.blue,
+                    //     iconColor: Colors.white,
+                    //     minimumSize:
+                    //         Size(width > 600 ? 200.0 : width * 0.38, 45),
+                    //     shape: RoundedRectangleBorder(
+                    //       borderRadius: BorderRadius.circular(8.0),
+                    //     ),
+                    //     elevation: 0,
+                    //   ),
+                    // ),
                     ElevatedButton.icon(
-                      onPressed: () {},
-                      icon: Icon(Icons.facebook),
-                      label: Text('Facebook', style: TextStyle(color: Colors.white)),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.blue,
-                        iconColor: Colors.white,
-                        minimumSize: Size(width > 600 ? 200.0 : width * 0.38, 45),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8.0),
-                        ),
-                        elevation: 0,
+                      onPressed: _loginWithFingerprint,
+                      icon: Icon(
+                        Icons.fingerprint,
+                        color: Colors.white,
                       ),
+                      label: Text('Vân tay',
+                          style: TextStyle(color: Colors.white)),
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.green,
+                          minimumSize:
+                              Size(width > 600 ? 200.0 : width * 0.38, 45),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8.0),
+                          )),
                     ),
                   ],
                 ),

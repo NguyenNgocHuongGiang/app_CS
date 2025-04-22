@@ -13,6 +13,7 @@ import 'dart:convert';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
+import 'package:app_cybersoft/component/shareButton.dart';
 
 class DetailCourse extends StatefulWidget {
   final String bidanh;
@@ -43,13 +44,16 @@ class _DetailCourseState extends State<DetailCourse> {
   @override
   void initState() {
     super.initState();
+
     khoaHocFuture = BaiHocServices().getDetailKhoaHoc(widget.bidanh);
     final userProvider = Provider.of<NguoiDungProvider>(context, listen: false);
     final khoaHocProvider =
         Provider.of<KhoaHocProvider>(context, listen: false);
     userProvider.fetchUserCourses();
     userProvider.fetchUserSaveCourses();
-    khoaHocProvider.fetchKhoaHocGoiY(widget.bidanh);
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      khoaHocProvider.fetchKhoaHocGoiY(widget.bidanh);
+    });
     khoaHocProvider.fetchReviewKhoaHoc(widget.bidanh);
   }
 
@@ -85,13 +89,12 @@ class _DetailCourseState extends State<DetailCourse> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // extendBodyBehindAppBar: true, // Giúp AppBar tràn xuống dưới ảnh
+      // extendBodyBehindAppBar: true,
       appBar: AppBar(
-        backgroundColor:
-            const Color.fromARGB(70, 250, 239, 44), // Làm trong suốt
+        backgroundColor: const Color.fromARGB(70, 250, 239, 44),
         elevation: 0, // Loại bỏ bóng
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.amber), // Nút quay lại
+          icon: Icon(Icons.arrow_back, color: Colors.amber),
           onPressed: () {
             Navigator.pop(context);
           },
@@ -129,6 +132,7 @@ class _DetailCourseState extends State<DetailCourse> {
           }
 
           final course = snapshot.data!;
+
           String description = course['moTa'];
           String shortDescription = description.length > 200
               ? description.substring(0, 200) + '...'
@@ -309,66 +313,97 @@ class _DetailCourseState extends State<DetailCourse> {
                         ),
                       ),
                       const SizedBox(height: 5),
-                      ElevatedButton(
-                        onPressed: () async {
-                          if (isSaveCourse == null) {
-                            try {
-                              final userInfo = await getUserInfo();
-                              final maNguoiDung = userInfo['userId'];
+                      Row(
+                        mainAxisAlignment:
+                            MainAxisAlignment.spaceBetween, // Căn đều 2 nút
+                        children: [
+                          Expanded(
+                            child: ElevatedButton(
+                              onPressed: () async {
+                                if (isSaveCourse == null) {
+                                  try {
+                                    final userInfo = await getUserInfo();
+                                    final maNguoiDung = userInfo['userId'];
 
-                              await NguoiDungServices().luuKhoaHoc(
-                                maNguoiDung: maNguoiDung ?? '',
-                                maKhoaHoc: course['id'],
-                              );
+                                    await NguoiDungServices().luuKhoaHoc(
+                                      maNguoiDung: maNguoiDung ?? '',
+                                      maKhoaHoc: course['id'],
+                                    );
 
-                              // Gọi Provider để cập nhật danh sách đã lưu
-                              Provider.of<NguoiDungProvider>(context,
-                                      listen: false)
-                                  .fetchUserSaveCourses();
+                                    // Gọi Provider để cập nhật danh sách đã lưu
+                                    Provider.of<NguoiDungProvider>(context,
+                                            listen: false)
+                                        .fetchUserSaveCourses();
 
-                              // Cập nhật trạng thái
-                              setState(() {
-                                isSaveCourse = {
-                                  'khoaHoc': {'biDanh': widget.bidanh}
-                                };
-                              });
+                                    // Cập nhật trạng thái
+                                    setState(() {
+                                      isSaveCourse = {
+                                        'khoaHoc': {'biDanh': widget.bidanh}
+                                      };
+                                    });
 
-                              // Hiển thị thông báo
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(
-                                  content:
-                                      Text('Đã thêm vào danh sách mong ước!'),
-                                  duration: Duration(seconds: 2),
+                                    // Hiển thị thông báo
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        content: Text(
+                                            'Đã thêm vào danh sách mong ước!'),
+                                        duration: Duration(seconds: 2),
+                                      ),
+                                    );
+                                  } catch (e) {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        content: Text(
+                                            'Lỗi khi thêm vào danh sách mong ước: $e'),
+                                        duration: Duration(seconds: 2),
+                                      ),
+                                    );
+                                  }
+                                } else {
+                                  await NguoiDungServices.boLuuKhoaHoc(
+                                      maKhoaHoc: course['id']);
+                                  setState(() {
+                                    isSaveCourse = null;
+                                  });
+                                  Future.delayed(Duration(milliseconds: 100),
+                                      () {
+                                    setState(() {});
+                                  });
+
+                                  print(1111111111);
+                                  print(isSaveCourse);
+
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      content: Text(
+                                          'Đã xóa khỏi danh sách mong ước!'),
+                                      duration: Duration(seconds: 2),
+                                    ),
+                                  );
+                                }
+                              },
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.white,
+                                side: BorderSide(color: Colors.amber, width: 1),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(5),
                                 ),
-                              );
-                            } catch (e) {
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(
-                                  content: Text(
-                                      'Lỗi khi thêm vào danh sách mong ước: $e'),
-                                  duration: Duration(seconds: 2),
-                                ),
-                              );
-                            }
-                          }
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.white,
-                          side: BorderSide(
-                            color: Colors.amber,
-                            width: 1,
+                              ),
+                              child: Text(
+                                isSaveCourse == null
+                                    ? 'Thêm vào wishlist'
+                                    : "Xóa khỏi wishlist",
+                                style: TextStyle(color: Colors.amber),
+                              ),
+                            ),
                           ),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(5),
+                          SizedBox(width: 10), // Khoảng cách giữa hai nút
+                          ShareButton(
+                            courseName: widget.tenKhoaHoc,
+                            courseLink: widget.bidanh,
                           ),
-                        ),
-                        child: Text(
-                          isSaveCourse == null
-                              ? 'Thêm vào danh sách mong ước'
-                              : "Đã thêm vào danh sách mong ước",
-                          style: TextStyle(color: Colors.amber),
-                        ),
-                      ),
+                        ],
+                      )
                     ],
                   ),
 
@@ -558,7 +593,7 @@ class _DetailCourseState extends State<DetailCourse> {
                                             : Colors.grey[100],
                                         radius: 10.0,
                                       ),
-                                      enabled: baiHoc[
+                                      enabled: !baiHoc[
                                           'isDemo'], // Chỉ cho phép nhấn nếu isDemo là true
                                       onTap: baiHoc['isDemo']
                                           ? () {
@@ -768,15 +803,35 @@ class _DetailCourseState extends State<DetailCourse> {
                   SizedBox(
                     height: 10.0,
                   ),
-                  Text(
-                    'Phản hồi của học viên:',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
 
-                  ReviewList(
-                    futureReviews: fetchReviewKhoaHoc(widget.bidanh),
-                    courseName: widget.tenKhoaHoc,
-                  )
+                  FutureBuilder<List<dynamic>>(
+                    future: fetchReviewKhoaHoc(widget.bidanh),
+                    builder: (context, snapshot) {
+                      if (snapshot.connectionState == ConnectionState.waiting) {
+                        return CircularProgressIndicator();
+                      } else if (snapshot.hasError ||
+                          !snapshot.hasData ||
+                          snapshot.data!.isEmpty) {
+                        return SizedBox.shrink();
+                      } else {
+                        return Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Phản hồi của học viên:',
+                              style: TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold),
+                            ),
+                            ReviewList(
+                              futureReviews: Future.value(
+                                  snapshot.data), // Tránh gọi lại API
+                              courseName: widget.tenKhoaHoc,
+                            ),
+                          ],
+                        );
+                      }
+                    },
+                  ),
                 ],
               ),
             ),

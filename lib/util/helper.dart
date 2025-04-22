@@ -15,3 +15,10 @@ Future<void> saveUserData(String accessToken, String id) async {
   await prefs.setString('userId', id);
   // await prefs.setString('fullname', fullname);
 }
+
+
+Future<void> saveUserCredentials(String email, String password) async {
+  final prefs = await SharedPreferences.getInstance();
+  await prefs.setString('email', email);
+  await prefs.setString('password', password);
+}

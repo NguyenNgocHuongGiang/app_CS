@@ -1,9 +1,12 @@
 import 'package:app_cybersoft/component/course.dart';
+import 'package:app_cybersoft/provider/nguoidung/nguoidung_provider.dart';
 import 'package:app_cybersoft/screen/Auth/login_screen.dart';
+import 'package:app_cybersoft/services/auth/auth_services.dart';
 import 'package:app_cybersoft/templates/auth_template.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:app_cybersoft/services/baihoc/baihoc-service.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -21,6 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
     super.initState();
     khoaHocFuture = BaiHocServices().getKhoaHocTheoSkill();
     _pageController = PageController();
+    
   }
 
   @override
@@ -31,6 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final userProvider = Provider.of<NguoiDungProvider>(context);
     return Scaffold(
       // backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -90,7 +95,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       const SizedBox(width: 10),
                       OutlinedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          AuthServices().logoutUser(context);
+                      userProvider.clearUser();
+                        },
                         child: const Text(
                           "Live demo",
                           style: TextStyle(color: Colors.amber),

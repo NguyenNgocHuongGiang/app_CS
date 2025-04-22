@@ -8,6 +8,8 @@ class NguoiDungServices {
     final userInfo = await getUserInfo();
     final token = userInfo['accessToken'];
 
+    print(token);
+
     final response = await http.get(
       Uri.parse('${Constants.BASE_URL}nguoidung/profile'),
       headers: {
@@ -17,6 +19,8 @@ class NguoiDungServices {
     );
 
     final decodedData = json.decode(response.body);
+
+    print(response.body);
 
     if (decodedData['statusCode'] == 200) {
       if (decodedData['content'] == null || decodedData['content'].isEmpty) {
@@ -55,9 +59,9 @@ class NguoiDungServices {
     final url = Uri.parse('${Constants.BASE_URL}khoahoc_nguoidung/luu-khoahoc');
 
     final data = {
-        "maNguoiDung": maNguoiDung,
-        "maKhoaHoc": maKhoaHoc,
-      };
+      "maNguoiDung": maNguoiDung,
+      "maKhoaHoc": maKhoaHoc,
+    };
 
     print(data);
 
@@ -67,6 +71,36 @@ class NguoiDungServices {
         'Content-Type': 'application/json',
       },
       body: jsonEncode(data),
+    );
+
+    print(response.body);
+
+    if (response.statusCode == 200) {
+      return jsonDecode(response.body);
+    } else {
+      throw Exception("Lỗi ${response.statusCode}: ${response.body}");
+    }
+  }
+
+  static Future<Map<String, dynamic>> boLuuKhoaHoc({
+    required int maKhoaHoc,
+  }) async {
+    final userInfo = await getUserInfo();
+    final token = userInfo['accessToken'];
+
+    if (token == null) {
+      throw Exception("Không tìm thấy token. Vui lòng đăng nhập lại.");
+    }
+
+    final url =
+        Uri.parse('${Constants.BASE_URL}khoahoc_nguoidung/remove-khoahoc-da-luu/${maKhoaHoc}');
+
+    final response = await http.delete(
+      url,
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer $token',
+      },
     );
 
     print(response.body);

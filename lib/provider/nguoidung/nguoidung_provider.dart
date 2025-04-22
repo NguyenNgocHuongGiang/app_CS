@@ -15,7 +15,7 @@ class NguoiDungProvider with ChangeNotifier {
     try {
       final userData = await _nguoiDungService.getThongTinNguoiDung();
       _user = userData as Map<String, dynamic>?;
-      // print(_user);
+      print(_user);
       notifyListeners();
     } catch (e) {
       print('Lỗi khi lấy thông tin người dùng: $e');

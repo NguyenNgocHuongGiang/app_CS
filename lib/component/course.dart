@@ -64,7 +64,7 @@ class _CardCourseState extends State<CardCourse> {
                   borderRadius: BorderRadius.circular(10),
                   child: SizedBox(
                     width: double.infinity,
-                    height: 90, // Chiều cao cố định
+                    height: 70, // Chiều cao cố định
                     child: Image.network(
                       '${Constants.IMAGE_URL}${widget.course['hinhAnh']}',
                       fit: BoxFit.cover,
@@ -147,8 +147,8 @@ class _CardCourseState extends State<CardCourse> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    widget.course['tenKhoaHoc'].length > 75
-                        ? '${widget.course['tenKhoaHoc'].substring(0, 72)}...'
+                    widget.course['tenKhoaHoc'].length > 50
+                        ? '${widget.course['tenKhoaHoc'].substring(0, 47)}...'
                         : widget.course['tenKhoaHoc'],
                     style: TextStyle(
                       fontSize: 10,
@@ -156,12 +156,12 @@ class _CardCourseState extends State<CardCourse> {
                       height: 1.3,
                     ),
                   ),
-                  Text(
-                    widget.course['moTa'].length > 35
-                        ? widget.course['moTa'].substring(0, 32) + '...'
-                        : widget.course['moTa'],
-                    style: TextStyle(fontSize: 8),
-                  ),
+                  // Text(
+                  //   widget.course['moTa'].length > 35
+                  //       ? widget.course['moTa'].substring(0, 32) + '...'
+                  //       : widget.course['moTa'],
+                  //   style: TextStyle(fontSize: 8),
+                  // ),
                   SizedBox(height: 4),
                   Container(
                     padding: EdgeInsets.symmetric(horizontal: 6, vertical: 2),

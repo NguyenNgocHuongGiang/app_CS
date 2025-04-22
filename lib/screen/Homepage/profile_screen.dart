@@ -1,5 +1,6 @@
 import 'package:app_cybersoft/provider/language/language_provider.dart';
 import 'package:app_cybersoft/screen/Homepage/payment_history_screen.dart';
+import 'package:app_cybersoft/util/helper.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:app_cybersoft/provider/nguoidung/nguoidung_provider.dart';
@@ -133,6 +134,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   },
                 ),
                 ListTile(
+                  leading: const Icon(Icons.fingerprint_outlined, color: Colors.blue),
+                  title: Text("Đăng nhập bằng vân tay"),
+                  onTap: () {
+                    // Xử lý đăng nhập bằng vân tay
+                    saveUserCredentials(user['email'], user['password']);
+                  },
+                ),
+                ListTile(
                   leading: const Icon(Icons.dark_mode, color: Colors.blue),
                   title: const Text("Chuyển đổi giao diện"),
                   onTap: () => themeProvider.toggleTheme(),
@@ -145,7 +154,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     showLanguageSelectionDialog(context);
                   },
                 ),
-                
                 ListTile(
                   leading: const Icon(Icons.info, color: Colors.orange),
                   title: const Text("Giới thiệu về Eduzy"),
