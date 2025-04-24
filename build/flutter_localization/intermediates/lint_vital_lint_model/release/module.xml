@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="/Users/thanhtrinh/.pub-cache/hosted/pub.dev/flutter_localization-0.3.1/android"
+    name=":flutter_localization"
+    type="LIBRARY"
+    maven="com.mastertipsy.flutter_localization:flutter_localization:"
+    agpVersion="8.2.1"
+    buildFolder="/Users/thanhtrinh/Documents/linhtinh2/app_CS/build/flutter_localization"
+    bootClassPath="/Users/thanhtrinh/Library/Android/sdk/platforms/android-34/android.jar:/Users/thanhtrinh/Library/Android/sdk/build-tools/34.0.0/core-lambda-stubs.jar"
+    javaSourceLevel="11"
+    compileTarget="android-34"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>
