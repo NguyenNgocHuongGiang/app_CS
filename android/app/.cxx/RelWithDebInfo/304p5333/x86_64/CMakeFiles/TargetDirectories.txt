@@ -1,0 +1,2 @@
+/Users/thanhtrinh/Documents/linhtinh2/app_CS/android/app/.cxx/RelWithDebInfo/304p5333/x86_64/CMakeFiles/edit_cache.dir
+/Users/thanhtrinh/Documents/linhtinh2/app_CS/android/app/.cxx/RelWithDebInfo/304p5333/x86_64/CMakeFiles/rebuild_cache.dir
